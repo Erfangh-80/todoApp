@@ -1,9 +1,9 @@
-const express = require("express")
+import express from 'express';
+import connectDB from './config/db';
+import todoRoutes from './routes/todoRoute';
 
-const connectDB = require("./config/db")
-
-const todoRoutes = require("./routes/todoRoute")
 const app = express();
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

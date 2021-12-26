@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+import mongoose from 'mongoose';
 
 const connectionDB = async () => {
     try {
@@ -6,7 +6,7 @@ const connectionDB = async () => {
         console.log("DB Connected");
     } catch (err) {
         console.log(err);
-        process.exit(1)
+        process.exit()
     }
 }
 

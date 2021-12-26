@@ -1,6 +1,8 @@
-const express = require("express")
+import express from 'express';
+import todoController from '../contorollers/todoController'
+
 const router = express.Router();
-const todoController = require("../controllers/todoController")
+
 
 router.get("/getlist", todoController.getTodoList)
 router.post("/createtodo", todoController.createTodo)

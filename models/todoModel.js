@@ -1,6 +1,6 @@
-const mongoose = require("mongoose")
+import { Mongoose } from "mongoose";
 
-const Schema = mongoose.Schema;
+const Schema = Mongoose.Schema;
 
 const todoSchema = new Schema({
     author: {
@@ -21,5 +21,5 @@ const todoSchema = new Schema({
     }
 })
 
-const todoModel = mongoose.model("todo", todoSchema)
+const todoModel = Mongoose.model("todo", todoSchema)
 module.exports = todoModel;
