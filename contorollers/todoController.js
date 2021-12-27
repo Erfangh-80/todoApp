@@ -4,7 +4,7 @@ import todoServices from '../service/service';
 class TodoController {
 
     async getTodoList(req, res) {
-        const todoList = await todoFind.getAllTask();
+        const todoList = await todoServices.getAllTask();
         // const todoList = await TodoModel.find();
         if (todoList.length <= 0) {
             return res.status(200).json({ message: " تسکی ثبت نشده است" })
@@ -49,7 +49,7 @@ class TodoController {
     async deletetodo(req, res) {
         try {
             // const id = await TodoModel.findByIdAndDelete({ _id: req.params.id })
-            const id = await todoFind.getByIdFromDelete(req.params.id);
+            const id = await todoServices.getByIdFromDelete(req.params.id);
             if (id == null) {
                 return res.status(404).json({ message: "پیدا نسشدد" })
             }
